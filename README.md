@@ -10,19 +10,23 @@ It relies on two simple sub-algorithms:
 Unit propagation
 
 Clauses with only one literal are called unit clauses
+
 Example The first clause in P 1 ∧ (¬P 1 ∨ P 2 ) ∧ (P 3 ∨ P 4 )
-Literals in unit clauses must be set to true
-P 1 = true is required
-Unit propagation repeatedly satisfies unit clauses and
-eliminates the literals:
+
+Literals in unit clauses must be set to true. P 1 = true is required
+Unit propagation repeatedly satisfies unit clauses and eliminates the literals:
+
 P 1 ∧ (¬P 1 ∨ P 2 ) ∧ (P 3 ∨ P 4 )
 P 2 ∧ (P 3 ∨ P 4 ) (by setting P 1 = true)
 (P 3 ∨ P 4 ) (by setting P 2 = true)
 
 Pure literal elimination
+
 Atomic sentences that only appear in positive literals or only appear in negative literals are called pure
 Example P 1 is pure in (P 1 ∨P 2 )∧(P 1 ∨P 3 )∧(¬P 2 ∨¬P 3 )
+
 Assignment of pure atomic sentences is trivial
+
 (P 1 ∨ P 2 ) ∧ (P 1 ∨ P 3 ) ∧ (¬P 2 ∨ ¬P 3 )
 (¬P 2 ∨ ¬P 3 )
 
